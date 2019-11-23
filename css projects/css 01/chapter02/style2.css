@@ -1,0 +1,9 @@
+body {
+    background-color: lightcoral;
+}
+
+h1,
+h2 {
+    color: yellow;
+    margin-left: 20px;
+}

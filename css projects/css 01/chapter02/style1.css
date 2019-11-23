@@ -1,11 +1,13 @@
-@charset "windows-1255";
-
 body {
-	background-color: lightcoral;
+    background-color: palegreen;
 }
 
-h1, h2 {
-	color: yellow;
-	margin-left: 20px;
+h1,
+h2 {
+    color: blue;
+    margin-left: 20px;
 }
 
+h3 {
+    color: green;
+}
