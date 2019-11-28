@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Things we can do with JavaScript</h1>
+
+    <h3>With JavaScript you can change HTML content</h3>
+    <p id="h101">This text will chage if you click the button</p>
+    <button onclick="document.getElementById('h101').innerHTML='CHANGED - reload page';">change</button>
+
+    <hr>
+    <h3>With JavaScript you can change HTML attributes</h3>
+    <p>
+        <img id="img1" src="../pics/cat.jpg" alt="animal" style="height: 100px;width: 200px;object-fit: cover; border: solid 5px green;">
+    </p>
+    <p>
+        <button onclick="document.getElementById('img1').src='../pics/cat.jpg'">cat</button>
+        <button onclick="document.getElementById('img1').src='../pics/cow.jpg'">cow</button>
+        <button onclick="document.getElementById('img1').src='../pics/horse.jpg'">horse</button>
+    </p>
+
+    <hr>
+    <h3>With JavaScript you can change HTML style (CSS)</h3>
+    <button onclick="document.getElementById('p1').style.fontSize='10px'">10 px</button>
+    <button onclick="document.getElementById('p1').style.fontSize='20px'">20 px</button>
+    <button onclick="document.getElementById('p1').style.fontSize='30px'">30 px</button>
+    <p id="p1">Chane the font size of this paragraph</p>
+
+    <hr>
+    <h3>With JavaScript you can hide and show HTML elements</h3>
+    <button onclick="document.getElementById('sp1').style.display='none'">hide</button>
+    <button onclick="document.getElementById('sp1').style.display='inline'">show</button>
+    <span id="sp1">This line of text can be shown or hidden</span>
+
+    <script>
+    </script>
+</body>
+
+</html>

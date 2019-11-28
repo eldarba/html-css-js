@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            margin: 10px;
+        }
+        
+        button {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS output options</h1>
+    <ul>
+        <li>
+            <!-- 1. using the window.alert() function -->
+            <button onclick="window.alert('This is an allert')">window.allert() - popup</button>
+        </li>
+        <li>
+            <!-- 2. using the window.console.log() function -->
+            <button onclick="f();">window.console.log() - console</button>
+        </li>
+        <li>
+            <!-- 3. using the window.document.write() function -->
+            <script>
+                window.document.write("<button>this content is written using the window.document.write() function</button>");
+            </script>
+        </li>
+        <li>
+            <button onclick="window.document.write('You overwritten all page content!')">Danger<br>never use the window.document.write() function after page is loaded</button>
+        </li>
+        <li>
+            <!-- 4. using an element innerHTML property -->
+            <button id="bt" onclick="this.innerHTML='You Clicked'">innerHTML</button>
+        </li>
+    </ul>
+
+    <script>
+        var c = 1;
+
+        function f() {
+            window.console.log('print to browser console: ' + c++);
+        }
+    </script>
+</body>
+
+</html>
