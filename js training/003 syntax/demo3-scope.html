@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>scope</h1>
+    <script>
+        var v1 = 5; // global scope (added to the windows object properties)
+        let v2 = 6; // global scope (NOT added to the windows object properties)
+
+        {
+            var x = 5; // global scope
+            let y = 6; // block scope
+        }
+        console.log(x);
+        // console.log(y); // error
+
+        function f() {
+            var a = 5; // function scope
+            let b = 6; // function scope
+            {
+                var c = 5; // function scope
+                let d = 6; // function block scope
+            }
+            console.log(c); // ok
+            // console.log(d); // error
+        }
+        f();
+        // console.log(a); // error
+        // console.log(b); // error
+    </script>
+</body>
+
+</html>

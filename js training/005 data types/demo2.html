@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo 2</h1>
+    <script>
+        // Unfortunately, in JavaScript, the data type of null is an object.
+        console.log("console.log(null);");
+        console.log(null);
+
+        console.log("console.log(typeof {});");
+        console.log(typeof {});
+
+
+        // console.log(null instanceof null); // error
+        console.log("console.log(null instanceof Object);");
+        console.log(null instanceof Object); // false
+
+        // typeof operator
+        console.log(typeof 5);
+        console.log(typeof "5");
+        console.log(typeof true);
+        console.log("typeof d");
+        var d = new Date();
+        console.log(typeof d);
+        // instanceof operator
+        console.log(d instanceof Date);
+        console.log(d instanceof Array);
+
+        // undefined and null are equal in value but different in type:
+        typeof undefined // undefined
+        typeof null // object
+        null === undefined // false
+        null == undefined // true
+    </script>
+</body>
+
+</html>

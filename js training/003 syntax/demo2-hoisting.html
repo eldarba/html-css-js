@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hoisting</h1>
+    <script>
+        console.log(x); // ok - var hoisated and initialized as undefined
+        // console.log(y); // error - let hoisted but not initialized
+
+        var x; // var declarations are hoisted and initialized as undefined
+        let y; //  let declarations are hoisted but not initialized
+
+        x = 5;
+        y = 6; // only after initialization a let variable can be used
+
+        console.log(y); // ok
+    </script>
+</body>
+
+</html>
