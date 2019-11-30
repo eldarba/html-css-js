@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events</h1>
+    <button onclick="x.displayTime()">Show the time and date</button>
+    <br>
+    <button onclick="x.clear()">clear</button>
+    <br>
+    <!-- invoking clear() colides with document.clear() hence will not work -->
+    <!-- In an event handler as HTML attribute, the Document object is in the scope chain before the Window object (...) -->
+    <button onclick="clear()">clear (will not work)</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        // Don't pollute the global namespace. 
+        // Create one object in global scope (with a name you are sure of
+        // does not collide with any window or document properties or ids
+        // of HTML elements) and assign the functions as properties of
+        // this object. Whenever you call a function, you reference it
+        // through this object.
+        var x = {
+
+            displayTime() {
+                document.getElementById("p1").innerHTML = Date();
+            },
+            clear() {
+                document.getElementById("p1").innerHTML = null;
+            }
+        };
+
+        function clear() {
+            document.getElementById("p1").innerHTML = null;
+        }
+    </script>
+</body>
+
+</html>

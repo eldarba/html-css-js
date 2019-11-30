@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>A function is triggered when the user is PRESSING a key in the input field.</p>
+
+    <input type="text" onkeydown="myFunction()"><br>
+    <p>A function is triggered when the user is RELEASING a key in the input field.</p>
+    <input type="text" onkeyup="myFunction()"><br>
+
+
+    <script>
+        function myFunction() {
+            alert("You pressed a key inside the input field");
+        }
+    </script>
+</body>
+
+</html>
