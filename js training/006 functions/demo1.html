@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <script>
+        //JavaScript is not a statically typed language. 
+        // Sometimes you may need to manually check types of parameters 
+        //  in your function body.
+        function sum1(a, b) {
+            var sum = a + b;
+            if (isNaN(sum)) {
+                return null;
+            } else {
+                return sum;
+            }
+        }
+
+        function sum2(a, b) {
+            var sum = a + b;
+            if (typeof sum == 'number') {
+                return sum;
+            } else {
+                return null;
+            }
+        }
+
+        console.log(sum1(5, 3));
+        console.log(sum1('a', 3));
+        console.log(sum1(5, 'b'));
+        console.log(sum1({}, 3));
+        console.log("============");
+        console.log(sum2(5, 3));
+        console.log(sum2('a', 3));
+        console.log(sum2(5, 'b'));
+        console.log(sum2({}, 3));
+    </script>
+</body>
+
+</html>

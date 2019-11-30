@@ -11,34 +11,42 @@
 <body>
     <h1>Demo 2</h1>
     <script>
-        // Unfortunately, in JavaScript, the data type of null is an object.
-        console.log("console.log(null);");
-        console.log(null);
+        // ===== null =====
+        console.log("null instanceof Object => ", null instanceof Object);
+        // result is false - null is not an instance at all
 
-        console.log("console.log(typeof {});");
-        console.log(typeof {});
+        // Unfortunately, in JavaScript, the data TYPE of null is an object:
+        console.log("typeof null => ", typeof null);
 
-
+        // the right-hand side of instanceof operator cannot be null
         // console.log(null instanceof null); // error
-        console.log("console.log(null instanceof Object);");
-        console.log(null instanceof Object); // false
+        console.log("=====");
+        // ================
 
-        // typeof operator
-        console.log(typeof 5);
-        console.log(typeof "5");
-        console.log(typeof true);
-        console.log("typeof d");
-        var d = new Date();
-        console.log(typeof d);
-        // instanceof operator
-        console.log(d instanceof Date);
-        console.log(d instanceof Array);
+        // ===== other types =====
+        console.log("typeof {} => ", typeof {}); // object
 
+        console.log("typeof 5 => ", typeof 5);
+        console.log("typeof '5' => ", typeof '5');
+        console.log("typeof true => ", typeof true);
+        console.log("typeof new Date() => ", typeof new Date());
+        console.log("new Date() instanceof Date => ", new Date() instanceof Date);
+        console.log("new Date() instanceof Array => ", new Date() instanceof Array);
+        console.log("=====");
+        // =======================
+
+        // ===== undefined =====
+        console.log("typeof undefined => ", typeof undefined);
         // undefined and null are equal in value but different in type:
-        typeof undefined // undefined
-        typeof null // object
-        null === undefined // false
-        null == undefined // true
+        console.log("null == undefined => ", null == undefined);
+        console.log("null === undefined => ", null === undefined);
+        // =====================
+
+
+        // ===== function =====
+        console.log("=====");
+        console.log("typeof function f() {} => ", typeof
+            function f() {});
     </script>
 </body>
 

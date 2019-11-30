@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <script>
+        // Object creation
+        var obj = {
+            // properties
+            a: 5,
+            a: 10, // overrides previous a property
+            b: 20,
+            // properties can be functions as well
+            // A method is a function stored as a property.
+            // function property syntax 1
+            printA() {
+                return 'a value is: ' + this.a;
+            },
+            // function property syntax 2
+            printB: function() {
+                return 'b value is: ' + this.b;
+            }
+        };
+
+        console.log(obj);
+        console.log('obj => ' + obj);
+
+        // object properties access - syntax 1 - . (using dot)
+        console.log("==========");
+        console.log('obj.a => ', obj.a);
+        console.log('obj.b => ', obj.b);
+        console.log('obj.printA() => ', obj.printA());
+        console.log('obj.printB() => ', obj.printB());
+
+        // object properties access - syntax 2 - []
+        console.log("==========");
+        console.log('obj["a"] => ', obj["a"]);
+        console.log('obj["b"] => ', obj["b"]);
+        console.log('obj["printA"]() => ', obj["printA"]());
+        console.log('obj["printB"]() => ', obj["printB"]());
+    </script>
+</body>
+
+</html>
