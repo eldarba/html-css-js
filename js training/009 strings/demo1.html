@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>string</h1>
+    <script>
+        // string length
+        {
+            let x = "abcde"; // let is used to keep block scopes
+            console.log("x => ", x);
+            console.log("x.length => ", x.length);
+        }
+        // escape characters
+        {
+            console.log("He read the book \"War and Peace\" and\tliked it.");
+            console.log('He read the book "War and Peace" and\vliked it.');
+        }
+        // string as object and primitive
+        {
+            console.log('typeof "aaa" => ', typeof "aaa"); // string
+            console.log('typeof new String("aaa") => ', typeof new String("aaa")); // object
+
+            console.log(new String("aaa") == new String("aaa")) // false
+            console.log("aaa" == new String("aaa")); // true
+            console.log("aaa" === new String("aaa")); // true
+            console.log(new String("aaa") == "aaa"); // true
+            console.log("aaa" == "aaa"); // true
+
+            var x = new String("abc");
+            var y = x;
+            console.log(x == y); // true
+        }
+    </script>
+</body>
+
+</html>
