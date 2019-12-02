@@ -15,9 +15,9 @@
         // Sometimes you may need to manually check types of parameters 
         //  in your function body.
         function sum1(a, b) {
-            var sum = a + b;
+            var sum = Number(a) + Number(b);
             if (isNaN(sum)) {
-                return null;
+                return "error - NAN";
             } else {
                 return sum;
             }
@@ -33,6 +33,7 @@
         }
 
         console.log(sum1(5, 3));
+        console.log(sum1("5", "3"));
         console.log(sum1('a', 3));
         console.log(sum1(5, 'b'));
         console.log(sum1({}, 3));
