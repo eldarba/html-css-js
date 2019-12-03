@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 9</title>
+</head>
+<body>
+	<h1>File 9</h1>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<script src="home.js"></script>
+	<script>
+		"use strict";
+		$("div1").innerHTML = x; // x is undefined
+		// $("div2").innerHTML = y; // error - y is not defined
+		var x = 5; // var declaration is hoisted, assignment stays here
+		let y = 10; // let declaration is NOT hoisted
+		$("div3").innerHTML = x; // x is 5
+		$("div4").innerHTML = y; // y is 10
+	</script>
+</body>
+</html>

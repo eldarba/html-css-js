@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var names = [ "aaa", "bbb", "ccc" ];
+		names.forEach(listNames);
+		function listNames(item) {
+			document.write(item + ", ")
+		}
+		document.write("<br>");
+		document.write("is it an array? " + Array.isArray(names));
+		document.write("<br>");
+		document.write("is it an array? " + (names instanceof Array));
+		var name = "Dan";
+		document.write("<br>");
+		document.write("is it an array? " + Array.isArray(name));
+		document.write("<br>");
+		document.write("is it an array? " + (name instanceof Array));
+	</script>
+</body>
+</html>

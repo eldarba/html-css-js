@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 11</title>
+</head>
+<body>
+	<h1>File 11</h1>
+	<script>
+		"use strict";
+		x = "x";
+		var x; // hoisted
+		alert(x);
+
+		var p = {
+			name : "Dan"
+		};
+
+		p.id = 101;
+		console.log(p);
+
+		delete p.id; // deleting a property
+		console.log(p);
+		// delete x; // deleting a variable is not allowed in strict mode
+	</script>
+</body>
+</html>

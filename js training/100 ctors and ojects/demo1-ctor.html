@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // define a CTOR function
+        function Person(id, name) {
+            this.id = id;
+            this.name = name;
+            this.age = 0;
+        }
+
+        // the CTOR function has a prototype which is a copy of Object prototype + extensions we can add
+        // here are 2 extensions we add:
+        // 1
+        Person.prototype.MAX_AGE = 120;
+        // 2
+        Person.prototype.printDetails = function() {
+            console.log("Person[id=" + this.id + ", name=" + this.name + ", age=" + this.age + "]");
+        }
+
+        // print the prototype of the Person ctor function
+        console.log("Person.prototype => ", Person.prototype)
+
+        // create a Person object
+        var p1 = new Person(101, "aaa");
+
+        // print the object
+        console.log(p1);
+        // use a method defined on the object prototype
+        p1.printDetails();
+
+        // define an inheriting type
+
+        function Employee(salary) {
+            this.salary = salary;
+        }
+
+        Employee.prototype = Object.create(Person.prototype);
+    </script>
+</body>
+
+</html>

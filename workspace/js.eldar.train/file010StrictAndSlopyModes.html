@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 10</title>
+</head>
+<body>
+	<h1>File 10</h1>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<script src="home.js"></script>
+	<script>
+		// "use strict";
+		function f1() {
+			var obj = {get x() {return "x"} };
+			obj.x = 3.14; // error if in strict mode
+			console.log(obj.x);
+		}
+		f1();
+		alert("script 1 done")
+	</script>
+	<script>
+		"use strict";
+		f1();
+		alert("script 2 done")
+	</script>
+</body>
+</html>

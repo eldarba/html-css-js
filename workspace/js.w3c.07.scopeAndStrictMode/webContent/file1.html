@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Scope</h1>
+	<script src="file1.js"></script>
+	<script>
+		alert("Hello");
+		alert(glb1);
+		alert(window.glb1);
+		f1();
+		alert(glb2); // created by f1()
+		// alert(loc); // local var
+	</script>
+</body>
+</html>

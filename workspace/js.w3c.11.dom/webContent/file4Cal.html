@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body style="direction: rtl;">
+	<h1>ממיר תארכים מלוח עברי ללועזי וחזרה</h1>
+	<h3>הפרש השנים הוא 1240</h3>
+	<p>
+		<label>הכנס שנה עברית</label> <input type="text" id="hebIn">
+	</p>
+	<p>
+		<button onclick="convertHebToGreg()">המרה לשנה לועזית</button>
+		<span id="gregOut"></span>
+	</p>
+	<p>
+		<label>הכנס שנה לועזית</label> <input type="text" id="gregIn">
+	</p>
+	<p>
+		<button onclick="convertFregToHeb()">המרה לשנה עברית</button>
+		<span id="hebOut"></span>
+	</p>
+	<script>
+		"use strict";
+		var map = new Map();
+		map.set("א", 1);
+		map.set("ב", 2);
+		map.set("ג", 3);
+		map.set("ד", 4);
+		map.set("ה", 5);
+		map.set("ו", 6);
+		map.set("ז", 7);
+		map.set("ח", 8);
+		map.set("ט", 9);
+		map.set("י", 10);
+		map.set("כ", 20);
+		map.set("ל", 30);
+		map.set("מ", 40);
+		map.set("נ", 50);
+		map.set("ס", 60);
+		map.set("ע", 70);
+		map.set("פ", 80);
+		map.set("צ", 90);
+		map.set("ק", 100);
+		map.set("ר", 200);
+		map.set("ש", 300);
+		map.set("ת", 400);
+		function convertHebToGreg() {
+			var heb = document.getElementById('hebIn').value;
+			var greg = 0;
+			for (var i = 0; i < heb.length; i++) {
+				greg += map.get(heb.charAt(i))
+			}
+			greg += 1240;
+			document.getElementById('gregOut').innerHTML = greg;
+		}
+	</script>
+</body>
+</html>

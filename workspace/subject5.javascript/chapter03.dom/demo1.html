@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="f1()">f1()</button>
+
+	<script type="text/javascript">
+		function f1() {
+			alert(window.location);
+			var color = window.prompt("Enter bacground color", "white");
+			alert("color: " + color);
+			window.document.body.bgColor = color;
+			if (window.confirm("go to google?")) {
+				window.location = "https://www.google.com";
+			} else {
+				document.write("Bye");
+			}
+		}
+	</script>
+</body>
+</html>

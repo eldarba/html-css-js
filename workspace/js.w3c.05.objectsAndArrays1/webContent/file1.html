@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Objects and Arrays</h1>
+	<p id="p1"></p>
+	<p id="p2"></p>
+
+	<script src="file1.js"></script>
+	<script>
+		var arr = [ "aaa", "bbb", "ccc" ];
+		showIn("p1", arr);
+
+		arr = new Array(10);
+		for (var i = 0; i < arr.length; i++) {
+			arr[i] = Math.floor(Math.random() * 10);
+		}
+		showIn("p2", arr);
+	</script>
+</body>
+</html>

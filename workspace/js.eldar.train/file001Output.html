@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="document.write('Bye');">Using document.write() after an HTML document is loaded, will delete all existing HTML</button>
+	<h1 id="top">Book</h1>
+	<h3>Chapter 1</h3>
+	<a href="#chap2">to chapter 2</a>
+	<br>
+	<a href="#chap3">to chapter 3</a>
+	<br>
+	<a href="#bottom">to end</a>
+	<br>
+	<script>
+		for (var i = 1; i < 25; i++) {
+			document.writeln("This is is chapter 1 Line # " + i + "<br>");
+		}
+	</script>
+	<h3 id="chap2">Chapter 2</h3>
+	<a href="#top">to top</a>
+	<br>
+	<a href="#chap3">to chapter 3</a>
+	<br>
+	<a href="#bottom">to end</a>
+	<br>
+	<script>
+		for (var i = 1; i < 25; i++) {
+			document.writeln("This is is chapter 2 Line # " + i + "<br>");
+		}
+	</script>
+	<h3 id="chap3">Chapter 3</h3>
+	<a href="#top">to top</a>
+	<br>
+	<a href="#chap2">to chapter 2</a>
+	<br>
+	<a href="#bottom">to end</a>
+	<br>
+	<script>
+		for (var i = 1; i < 25; i++) {
+			document.writeln("This is is chapter 3 Line # " + i + "<br>");
+		}
+	</script>
+	<a href="#top">to top</a>
+	<br>
+	<hr id="bottom" style="width: 50%;border-color: red;">
+</body>
+</html>

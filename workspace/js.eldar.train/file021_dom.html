@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 21</title>
+</head>
+<body>
+	<h1 id="heading" class="myClass">File 21</h1>
+	<p class="myClass">AAA</p>
+	<p>BBB</p>
+	<p class="myClass">CCC</p>
+	<script>
+		"use strict";
+		let element, list;
+
+		// document.getElementById(id)
+		element = document.getElementById("heading");
+		console.log(element);
+
+		// document.getElementsByTagName(name)
+		console.log("=== list of P elements");
+		list = document.getElementsByTagName("p");
+		console.log(list);
+		console.log("list length: " + list.length);
+		for (let i = 0; i < list.length; i++) {
+			console.log(list[i].innerHTML);
+		}
+
+		// document.getElementsByClassName(name)
+		console.log("=== list of myClass elements");
+		list = document.getElementsByClassName("myClass");
+		for (let i = 0; i < list.length; i++) {
+			console.log(list[i].tagName + ": innerHTML: " + list[i].innerHTML);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	Click the button to display a string in a specified color.
+	<br>
+	<label for="tfText">text</label>
+	<input type="text" id="tfText">
+	<br>
+	<label for="tfColor">color</label>
+	<input type="text" id="tfColor">
+	<br>
+	<label for="tfSize">size</label>
+	<input type="text" id="tfSize">
+	<br>
+	<button onclick="show()">try it</button>
+	<div id="txt1"></div>
+	<div id="txt2"></div>
+
+	<script type="text/javascript">
+		function show() {
+			var text = document.getElementById("tfText").value;
+			var color = document.getElementById("tfColor").value;
+			var size = document.getElementById("tfSize").value;
+			var res1 = text.fontcolor(color);
+			var res2 = text.fontsize(size);
+			alert(res1);
+			alert(res2);
+			document.getElementById("txt1").innerHTML = res1;
+			document.getElementById("txt2").innerHTML = res2;
+			
+			var str = new String("Go to Ynet");
+			var strLink = str.link("http://www.ynet.co.il");
+	        alert(strLink);
+		}
+	</script>
+</body>
+</html>

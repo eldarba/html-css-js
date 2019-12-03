@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 8</title>
+</head>
+<body>
+	<h1>File 8</h1>
+	<p>Global Variables in HTML</p>
+	<p>With JavaScript, the global scope is the complete JavaScript environment.</p>
+	<p>In HTML, the global scope is the window object. All global variables belong to the window object.</p>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<script src="home.js"></script>
+	<script>
+		"use strict";
+		var eldar = "Eldar";
+		$("div1").innerHTML = eldar;
+		$("div2").innerHTML = window.eldar;
+		window.console.log(eldar);
+		window.alert(eldar);
+	</script>
+</body>
+</html>

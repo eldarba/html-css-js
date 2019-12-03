@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>file 20</title>
+</head>
+<body>
+	<h1>File 20</h1>
+	<p>In this demo we see how to get a collection of elements using the DOM API and changing them using JavaScript and DOM.</p>
+	<div id="div1">
+		<fieldset style="width: 50%; margin: 5px;">
+			<legend>group 1</legend>
+			<input> <br> <input><br> <input><br>
+			<button onclick="changeInputElements('div1', document.getElementById('select1').value)">change color</button>
+		</fieldset>
+	</div>
+
+	<div id="div2">
+		<fieldset id="xx" style="width: 50%; margin: 5px;">
+			<legend>group 2</legend>
+			<input> <br> <input><br> <input><br>
+			<button onclick="changeInputElements('div2', document.getElementById('select1').value)">change color</button>
+		</fieldset>
+	</div>
+	<select id="select1">
+		<option value="">non</option>
+		<option value="yellow">yellow</option>
+		<option value="pink">pink</option>
+		<option value="red">red</option>
+		<option value="green">green</option>
+		<option value="cyan">cyan</option>
+	</select>
+
+	<script>
+		"use strict";
+		function changeInputElements(elementId, color) {
+			let x;
+			x = document.getElementById(elementId).getElementsByTagName("input");
+			for (let i = 0; i < x.length; i++) {
+				x[i].style.backgroundColor = color;
+			}
+			x = document.getElementById(elementId).getElementsByTagName("fieldset");
+			for (let i = 0; i < x.length; i++) {
+				x[i].style.borderColor = color;
+			}
+		}
+	</script>
+</body>
+</html>

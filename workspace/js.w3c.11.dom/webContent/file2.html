@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="demo">Hello</p>
+	<button value="red" onclick="f(this.value)">red</button>
+	<br>
+	<button onclick="f(this.innerHTML)">green</button>
+	<br>
+	<button onclick="f(this.innerHTML)">blue</button>
+	<br>
+	<script>
+		"use strict";
+		function f(value) {
+			document.getElementById("demo").style.color = value;
+		}
+	</script>
+</body>
+</html>

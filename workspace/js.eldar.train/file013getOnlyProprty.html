@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 13</title>
+</head>
+<body>
+	<h1>File 13</h1>
+	<script>
+		"use strict";
+		var rectangle = {
+			length : 0,
+			width : 0,
+			get area() {return this.length * this.width}
+		};
+		rectangle.length = 5;
+		rectangle.width = 3;
+		console.log(rectangle);
+		console.log(rectangle.area);
+		// rectangle.area = 3; // error
+	</script>
+</body>
+</html>

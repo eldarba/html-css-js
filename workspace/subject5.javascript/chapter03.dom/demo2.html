@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="f1()">f1()</button>
+	<div id="div1">
+		<h3>Hello</h3>
+	</div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+
+	<script type="text/javascript">
+		function f1() {
+			var innerHTML = document.getElementById("div1").innerHTML;
+			var innerText = document.getElementById("div1").innerText;
+			alert("innerHTML: " + innerHTML);
+			alert("innerText: " + innerText);
+			document.getElementById("div2").innerText = innerHTML;
+			document.getElementById("div3").innerHTML = innerHTML;
+		}
+	</script>
+</body>
+</html>

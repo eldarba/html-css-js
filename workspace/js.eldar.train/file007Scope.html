@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 7</title>
+</head>
+<body>
+	<h1>File 7 - will produce error when in strict mode</h1>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<script src="home.js"></script>
+	<script>
+		"use strict";
+		f1();
+		$("div1").innerHTML = x;
+		function f1() {
+			x = 5;
+		}
+	</script>
+</body>
+</html>

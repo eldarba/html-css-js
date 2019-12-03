@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+		var aaaaaa = 5;
+		debugger;
+		f1();
+
+		function f1() {
+			var x = Math.floor(Math.random() * 10);
+			debugger;
+			var y = Math.floor(Math.random() * 10);
+			var sum = x + y;
+			f2();
+			console.log(x + " + " + y + " = " + sum);
+		}
+
+		function f2() {
+			var x = Math.floor(Math.random() * 10);
+			debugger;
+			var y = Math.floor(Math.random() * 10);
+			var sum = x + y;
+			console.log(x + " + " + y + " = " + sum);
+		}
+	</script>
+</body>
+</html>

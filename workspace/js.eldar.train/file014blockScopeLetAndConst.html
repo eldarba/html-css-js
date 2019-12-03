@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 14</title>
+</head>
+<body>
+	<h1>File 14</h1>
+	<script>
+		"use strict";
+		{
+			var xVar = "xVar";
+			let xLet = "xLet";
+			const xConst = "xConst";
+			console.log(xVar);
+			console.log(xLet);
+			console.log(xConst);
+			// xConst = "AAA"; //error - Assignment to constant variable.
+		}
+		console.log(xVar);
+		// console.log(xLet); // error - not in scope
+		// console.log(xConst); // error - not in scope
+
+		// another demo
+		console.log("another demo");
+		for (var x = 1; x <= 3; x++) {
+			console.log(x);
+		}
+		console.log(x);
+
+		for (let y = 1; y <= 3; y++) {
+			console.log(y);
+		}
+		// console.log(y); // error - not in scope
+
+		// another demo
+		console.log("another demo");
+		var n1 = 2;
+		let n2 = 4;
+		console.log("n1 = " + n1);
+		console.log("n2 = " + n2);
+		{
+			var n1 = 6; // n1 is redeclared
+			let n2 = 8; // n2 is NOT redclared
+			console.log("n1 = " + n1);
+			console.log("n2 = " + n2);
+		}
+		console.log("n1 = " + n1);
+		console.log("n2 = " + n2);
+		
+		const z;
+		z=9;
+		console.log(z);
+	</script>
+</body>
+</html>

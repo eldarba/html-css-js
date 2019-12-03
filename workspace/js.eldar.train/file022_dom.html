@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>File 22</title>
+</head>
+<body>
+	<h1>File 22</h1>
+	<p>In this demo we create HTML elements and append them to the document using DOM API.</p>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<script>
+		"use strict";
+		let element;
+
+		element = document.createElement("label");
+		element.innerHTML = "name"
+		document.getElementById("div1").appendChild(element);
+
+		element = document.createElement("input");
+		element.id = "in1";
+		document.getElementById("div2").appendChild(element);
+
+		element = document.createElement("button");
+		element.innerHTML = "Click";
+		element.onclick = f;
+		document.getElementById("div3").appendChild(element);
+
+		document.getElementById("div4").innerHTML = "ready state: " + document.readyState;
+
+		document.write("=== End of Page ===");
+
+		function f() {
+			document.getElementById("div4").innerHTML = "ready state: " + document.readyState;
+			alert("Hello " + document.getElementById("in1").value);
+		}
+	</script>
+</body>
+</html>

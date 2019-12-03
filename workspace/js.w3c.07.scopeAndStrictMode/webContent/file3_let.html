@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+
+		var person = {
+			first : "Ran",
+			last : "Bar",
+			getFullName : function() {
+				return this.first + " " + this.last;
+			}
+		};
+
+		alert(person.getFullName())
+
+		var x = 5;
+		alert(x);
+
+		{
+			let x = 100; // only let keyword (not var) allows block scope
+			alert(x);
+		}
+		alert(x);
+	</script>
+</body>
+</html>
