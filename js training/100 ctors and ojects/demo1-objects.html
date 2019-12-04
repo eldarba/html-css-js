@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objects, Inheritance and Prototypes</h1>
+    <script>
+        function hello() {
+            console.log("hello from static");
+        }
+
+        function Shape(color) {
+            this.color = color;
+        }
+        Shape.prototype.printColor = function() {
+            console.log("shape color:", this.color);
+        }
+
+        function Rectangle(color, length, width) {
+            Shape.call(this, color);
+            this.length = length;
+            this.width = width;
+        }
+        Rectangle.prototype = Object.create(Shape.prototype);
+        Rectangle.prototype.constructor = Rectangle;
+        Rectangle.prototype.printSides = function() {
+            console.log("rectangle sides: length:", this.length, "width:", this.width);
+        }
+        Rectangle.prototype.getArea = function() {
+            return this.length * this.width;
+        }
+
+        function Square(color, side) {
+            Rectangle.call(this, color, side, side);
+        }
+        Square.prototype = Object.create(Rectangle.prototype);
+        Square.prototype.constructor = Square;
+
+        function Circle(color, radius) {
+            Shape.call(this, color);
+            this.radius = radius;
+        }
+        Circle.prototype = Object.create(Shape.prototype);
+        Circle.prototype.constructor = Circle;
+        Circle.prototype.getArea = function() {
+            return Math.PI * Math.pow(this.radius, 2);
+        }
+
+
+        var s1 = new Shape();
+        var s2 = new Shape("Red");
+        console.log(s1);
+        console.log(s2);
+        var r1 = new Rectangle();
+        var r2 = new Rectangle("green");
+        var r3 = new Rectangle("green", 10);
+        var r4 = new Rectangle("green", 10, 6);
+        var r5 = new Rectangle(undefined, 60, 30);
+        console.log(r1);
+        console.log(r2);
+        console.log(r3);
+        console.log(r4);
+        console.log(r5);
+
+        var sq1 = new Square("Pink", 5);
+        console.log(sq1);
+        sq1.printColor();
+        sq1.printSides();
+        console.log("area:", sq1.getArea());
+
+        var cir1 = new Circle("Cyan", 3.2);
+        console.log(cir1);
+        console.log("area:", cir1.getArea());
+        cir1.printColor();
+    </script>
+</body>
+
+</html>

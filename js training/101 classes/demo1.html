@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Classes in Javascript</h1>
+    <p>JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.</p>
+    <script>
+        class Shape {
+            constructor(color) {
+                this.color = color;
+            }
+            printColor() {
+                console.log("shape color:", this.color);
+            }
+
+            static hello() {
+                console.log("hello from static");
+            }
+        }
+
+        class Rectangle extends Shape {
+
+            constructor(color, length, width) {
+                super(color);
+                this.length = length;
+                this.width = width;
+            }
+
+            printSides() {
+                console.log("rectangle sides: length:", this.length, "width:", this.width);
+            }
+
+            getArea() {
+                return this.length * this.width;
+            }
+        }
+
+        class Square extends Rectangle {
+            constructor(color, side) {
+                super(color, side, side);
+            }
+        }
+
+        class Circle extends Shape {
+            constructor(color, radius) {
+                super(color);
+                this.radius = radius;
+            }
+
+            getArea() {
+                return Math.PI * Math.pow(this.radius, 2);
+            }
+        }
+
+        // invoke static
+        Shape.hello();
+
+        var s1 = new Shape();
+        var s2 = new Shape("Red");
+        console.log(s1);
+        console.log(s2);
+        var r1 = new Rectangle();
+        var r2 = new Rectangle("green");
+        var r3 = new Rectangle("green", 10);
+        var r4 = new Rectangle("green", 10, 6);
+        var r5 = new Rectangle(undefined, 60, 30);
+        console.log(r1);
+        console.log(r2);
+        console.log(r3);
+        console.log(r4);
+        console.log(r5);
+
+        var sq1 = new Square("Pink", 5);
+        console.log(sq1);
+        sq1.printColor();
+        sq1.printSides();
+        console.log("area:", sq1.getArea());
+
+        var cir1 = new Circle("Cyan", 3.2);
+        console.log(cir1);
+        console.log("area:", cir1.getArea());
+        cir1.printColor();
+    </script>
+</body>
+
+</html>
