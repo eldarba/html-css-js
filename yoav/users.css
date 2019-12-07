@@ -1,0 +1,60 @@
+section {
+    direction: rtl;
+    height: 100%;
+    border: 2px solid black;
+    background-color: rgb(189, 109, 52);
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 13% 80% 7%;
+    grid-auto-columns: repeat(12, 1fr)
+}
+
+header {
+    grid-column: span 12;
+    border: 2px solid black;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: x-large;
+}
+
+aside {
+    grid-column: span 2;
+    border: 2px solid black;
+    font-family: 'New Rocker', cursive;
+    float: right;
+}
+
+main {
+    background-image: url("view.jpg");
+    grid-column: span 10;
+    border: 2px solid black;
+    font-family: 'Pirata One', cursive;
+}
+
+footer {
+    grid-column: span 12;
+    border: 2px solid black;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+a>img {
+    height: 50px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+}
+
+main>img {
+    height: 30%;
+    resize: both;
+    margin: 15px;
+    border: tomato solid 10px;
+}

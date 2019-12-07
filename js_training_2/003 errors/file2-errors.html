@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <fieldset>
+        <legend>validation using tag properties</legend>
+        <form action="">
+            <p>Please input a number between 5 and 10:</p>
+            <p><input id="in1" type="number" min="5" max="10" step="1"></p>
+            <button>Send</button>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>validation using JavaScript</legend>
+        <p>Please input a number between 5 and 10:</p>
+        <input id="in2" type="text">
+        <button type="button" onclick="myFunction()">Test Input</button>
+        <p id="p1"></p>
+    </fieldset>
+
+    <script>
+        function myFunction() {
+            var message, x;
+            message = document.getElementById("p1");
+            message.innerHTML = "";
+            x = document.getElementById("in2").value;
+            try {
+                if (x == "") throw "empty";
+                if (isNaN(x)) throw "not a number";
+                x = Number(x);
+                if (x < 5) throw "too low";
+                if (x > 10) throw "too high";
+                message.innerHTML = "Input is OK";
+            } catch (err) {
+                message.innerHTML = "Input is " + err;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+        "use strict";
+        /**
+         * executes a given function
+         * @param {function} func
+         */
+        function giveMeFunctionToExecute(func) {
+            if (func instanceof Function) {
+                func();
+            } else {
+                console.log("Since you did not send a method I dont know what to do");
+            }
+        }
+
+        /**
+         * executes a given function on 2 random numbers
+         * @param {function} func
+         */
+        function giveMeFunctionToExecuteOn2RandomNumbers(func) {
+            if (func instanceof Function) {
+                let a = Math.floor(Math.random() * 101);
+                let b = Math.floor(Math.random() * 101);
+                let res = func(a, b);
+                console.log(res);
+            } else {
+                console.log("Since you did not send a method I dont know what to do");
+            }
+        }
+
+        console.log("==========================================");
+        giveMeFunctionToExecute();
+        console.log("==========");
+
+        function instructions() {
+            console.log("stand on one leg");
+            console.log("now stand on the other leg");
+            console.log("now sit down");
+        }
+
+        giveMeFunctionToExecute(instructions);
+
+
+        console.log("==========");
+
+        giveMeFunctionToExecute(() => console.log("sing for me"));
+
+
+        console.log("==========");
+
+
+        giveMeFunctionToExecuteOn2RandomNumbers((a, b) => {
+            let msg = "the numbers are: " + a + ", " + b + ".";
+            return msg;
+        });
+
+        giveMeFunctionToExecuteOn2RandomNumbers((a, b) => {
+            let sum = a + b;
+            return a + " + " + b + " = " + sum;
+        });
+    </script>
+</body>
+
+</html>

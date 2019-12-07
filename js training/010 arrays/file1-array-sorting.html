@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>arrays</h1>
+    <script>
+        "use strict"; //Defines that JavaScript code should be executed in "strict mode".
+
+        class Person {
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        /**
+         * Prints the person elements to the consol.
+         * @param {Person[]} persons
+         */
+        function printPersons(persons) {
+            for (const curr of persons) {
+                console.log(curr);
+            }
+        }
+    </script>
+
+    <script>
+        "use strict";
+        console.log("bbb".localeCompare("aaa"));
+
+        let arr = [6, "bbb", 401, "aaa", 7, 6, 201];
+        console.log(arr);
+        arr.sort(); // alphabetic order
+        console.log(arr);
+        arr.sort((a, b) => b - a);
+        console.log(arr);
+        console.log("============");
+
+        let p1 = new Person(101, "Dan", 30);
+        let p2 = new Person(102, "Charls", 20);
+        let p3 = new Person(103, "Ben", 40);
+        let p4 = new Person(104, "Avi", 10);
+
+        arr = [p1, p2, p3, p4];
+
+        console.log("insertion order ==================");
+        printPersons(arr);
+
+        console.log("sorted by age ====================");
+        arr.sort((p1, p2) => {
+            return p1.age - p2.age;
+        });
+        printPersons(arr);
+
+        console.log("sorted by name ===================");
+        arr.sort((p1, p2) => p1.name.localeCompare(p2.name));
+        printPersons(arr);
+
+        console.log("sorted by id =====================");
+        arr.sort((p1, p2) => p1.id - p2.id);
+        printPersons(arr);
+
+
+        arr = [4, 8, 5, 1, 4, 9];
+        console.log(arr);
+        arr.sort((a, b) => a - b);
+        console.log(arr);
+        arr.sort((a, b) => b - a);
+        console.log(arr);
+    </script>
+</body>
+
+</html>
