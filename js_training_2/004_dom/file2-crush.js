@@ -59,42 +59,42 @@
 //     item.style.backgroundColor = "lightBlue";
 // }
 
-// QUERY SELECTOR - use any css selector - gives first instance
-let element = document.querySelector('li'); // tag name
-console.log(element);
-element = document.querySelector('#header1') // id
-console.log(element);
-element.style.borderBottom = 'solid 5px red';
+// // QUERY SELECTOR - use any css selector - gives first instance
+// let element = document.querySelector('li'); // tag name
+// console.log(element);
+// element = document.querySelector('#header1') // id
+// console.log(element);
+// element.style.borderBottom = 'solid 5px red';
 
-element = document.querySelector('input'); // tag name
-element.value = 'hello input';
-// tag + property value - like we do in css
-element = document.querySelector('input[type="submit"]');
-element.value = 'SEND';
+// element = document.querySelector('input'); // tag name
+// element.value = 'hello input';
+// // tag + property value - like we do in css
+// element = document.querySelector('input[type="submit"]');
+// element.value = 'SEND';
 
-element = document.querySelector('.list-item'); // class
-element.style.color = 'red';
-// last child in class
-element = document.querySelector('.list-item:last-child'); // class
-element.style.color = 'green';
-// nth child in class
-element = document.querySelector('.list-item:nth-child(2)'); // class
-element.style.color = 'blue';
+// element = document.querySelector('.list-item'); // class
+// element.style.color = 'red';
+// // last child in class
+// element = document.querySelector('.list-item:last-child'); // class
+// element.style.color = 'green';
+// // nth child in class
+// element = document.querySelector('.list-item:nth-child(2)'); // class
+// element.style.color = 'blue';
 
-// QUERY SELECTOR ALL - use any css selector - gives collection of all instances
-let elements = document.querySelectorAll('h1, h2');
-console.log(elements);
+// // QUERY SELECTOR ALL - use any css selector - gives collection of all instances
+// let elements = document.querySelectorAll('h1, h2');
+// console.log(elements);
 
-for (const e of elements) {
-    e.textContent = "XXXXXXX";
-}
+// for (const e of elements) {
+//     e.textContent = "XXXXXXX";
+// }
 
-let odd = document.querySelectorAll('li:nth-child(odd)');
-let even = document.querySelectorAll('li:nth-child(even)');
+// let odd = document.querySelectorAll('li:nth-child(odd)');
+// let even = document.querySelectorAll('li:nth-child(even)');
 
-for (const e of odd) {
-    e.style.backgroundColor = 'lightBlue';
-}
-for (const e of even) {
-    e.style.backgroundColor = 'coral';
-}
+// for (const e of odd) {
+//     e.style.backgroundColor = 'lightBlue';
+// }
+// for (const e of even) {
+//     e.style.backgroundColor = 'coral';
+// }
