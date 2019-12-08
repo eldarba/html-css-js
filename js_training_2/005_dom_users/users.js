@@ -137,24 +137,24 @@ let usersList = document.querySelector('#items');
 // console.log(usersList.previousElementSibling);
 // usersList.previousElementSibling.style.color = 'green';
 
-// CREATING ELEMENTS AND INSERT THEM
-// create a div
-let newDiv = document.createElement('div');
-// add class
-newDiv.className = 'hello';
-// add id
-newDiv.id = 'myDiv';
-// set an attribute
-newDiv.setAttribute('title', 'Hello Div'); // tooltip
-// create a text node and append to our div
-// newDiv.innerHTML = "aaa"; // ???
-let newDivText = document.createTextNode('This is the Text of the new div');
-newDiv.appendChild(newDivText);
+// // CREATING ELEMENTS AND INSERT THEM
+// // create a div
+// let newDiv = document.createElement('div');
+// // add class
+// newDiv.className = 'hello';
+// // add id
+// newDiv.id = 'myDiv';
+// // set an attribute
+// newDiv.setAttribute('title', 'Hello Div'); // tooltip
+// // create a text node and append to our div
+// // newDiv.innerHTML = "aaa"; // ???
+// let newDivText = document.createTextNode('This is the Text of the new div');
+// newDiv.appendChild(newDivText);
 
-// insert to our DOM
-let header = document.querySelector('#header1'); // the header
-let h1InHeader = document.querySelector('#header1 h1'); // in the header the h1 element
-header.insertBefore(newDiv, h1InHeader); // insert the div in the header before the h1 element
-// now we can treat it like any other element in the DOM
-newDiv.style.fontSize = '25px';
-console.log(newDiv);
+// // insert to our DOM
+// let header = document.querySelector('#header1'); // the header
+// let h1InHeader = document.querySelector('#header1 h1'); // in the header the h1 element
+// header.insertBefore(newDiv, h1InHeader); // insert the div in the header before the h1 element
+// // now we can treat it like any other element in the DOM
+// newDiv.style.fontSize = '25px';
+// console.log(newDiv);
