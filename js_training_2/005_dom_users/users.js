@@ -28,7 +28,7 @@ let headerTitle = document.getElementById('head1');
 // headerTitle.textContent = "Hello";
 // headerTitle.innerText = "Goodby";
 // 
-// headerTitle.innerHTML = '<h3>Hello</>';
+// headerTitle.innerHTML = '<h3>Hello<h3/>';
 // 
 headerTitle.style.borderBottom = 'solid 3px black'
 
@@ -58,6 +58,11 @@ let listItems2 = document.getElementsByTagName('li');
 // for (const item of listItems2) {
 //     item.style.backgroundColor = "lightBlue";
 // }
+
+// GET ELEMENTS BY NAME
+// document.getElementsByName('x'); // get all elements where the name attr = x
+
+
 
 // // QUERY SELECTOR - use any css selector - gives first instance
 let element = document.querySelector('li'); // tag name
@@ -152,9 +157,86 @@ let usersList = document.querySelector('#items');
 // newDiv.appendChild(newDivText);
 
 // // insert to our DOM
-// let header = document.querySelector('#header1'); // the header
+let header = document.querySelector('#header1'); // the header
 // let h1InHeader = document.querySelector('#header1 h1'); // in the header the h1 element
 // header.insertBefore(newDiv, h1InHeader); // insert the div in the header before the h1 element
 // // now we can treat it like any other element in the DOM
 // newDiv.style.fontSize = '25px';
 // console.log(newDiv);
+
+// ============= EVENTS ============================
+// ============= EVENTS ============================
+
+// how to add event listener to button  fro js
+// add 2  buttons to the html to work on
+
+// option 1 - using unonymous function ====
+let bt1 = document.getElementById('bt1');
+bt1.addEventListener('click', function(e) {
+    console.log("button 1 clicked");
+    console.log(e); // the event object
+    // when the button is clicked, this function is invoked with the event param passed to it.
+});
+//=========================================
+
+// option 2 - using named function ========
+let bt2 = document.getElementById('bt2');
+bt2.addEventListener('click', f1);
+// when the button is clicked, function f1 is invoked with the event param passed to it.
+
+/**
+ * this method runs when button 2 is clicked.
+ * @param {Event} e the click event parameter.
+ * @returns {number} the value 5.
+ */
+function f1(e) {
+    console.log('button 2 clicked');
+
+    // // log some data
+    // console.log(e); // the event object
+    // console.log(e.target); // the object to which event is dispatched (its target).
+    // console.log(e.target.id);
+    // console.log(e.target.className);
+    // console.log(e.target.classList);
+
+    // // change the DOM
+    // // add a div before button 1
+    // let outputDiv = document.createElement('div');
+    // outputDiv.id = 'output';
+    // let container = document.querySelector('div.container');
+    // let element = document.getElementById('bt1');
+    // // insert 'outputDiv' to 'container' before 'element'
+    // container.insertBefore(outputDiv, element);
+    // outputDiv.innerHTML = '<div>' + e.target.id + '</div>';
+
+    // event info
+    console.log("event type:", e.type);
+    console.log("x relative to window:", e.clientX);
+    console.log("y relative to window:", e.clientY);
+    console.log("x relative to button:", e.offsetX);
+    console.log("y relative to button:", e.offsetY);
+    // event info alt-ctrl-shift
+    console.log("alt held down:", e.altKey);
+    console.log("ctl held down:", e.ctrlKey);
+    console.log("shift held down:", e.shiftKey);
+    console.log("================");
+
+
+    return 5;
+}
+//=========================================
+
+// add button 3 to the html
+let bt3 = document.getElementById('bt3');
+
+bt3.addEventListener('click', f2);
+// bt3.addEventListener('dblclick', f2);
+// bt3.addEventListener('mousedown', f2);
+// bt3.addEventListener('mouseup', f2);
+
+function f2(e) {
+    console.log(e.type);
+
+}
+
+// we are at part 3 time 15:20
