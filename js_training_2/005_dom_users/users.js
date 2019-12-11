@@ -235,8 +235,15 @@ bt3.addEventListener('click', f2);
 // bt3.addEventListener('mouseup', f2);
 
 function f2(e) {
-    console.log(e.type);
+    console.log('EVENT TYPE:', e.type, ':' + e.target.tagName);
+
 
 }
 
-// we are at part 3 time 15:20
+// add a light gray div with id="box" bellow the buttons in the html
+let box = document.getElementById('box');
+box.addEventListener('mouseenter', f2); // fires when entering the registered element area from outside
+box.addEventListener('mouseleave', f2); // fires when leaving the registered element area to the outside
+
+box.addEventListener('mouseover', f2); // fires when going over the registered element or when going over it's children
+box.addEventListener('mouseout', f2); // fires when going out of the registered element or when going out of it's children even if still in the ara of the registered
