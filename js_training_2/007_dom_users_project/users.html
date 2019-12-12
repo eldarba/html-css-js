@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+    <header id="header1">
+        <h1 id="head1">Users List <input id="filter" type="text" placeholder="Search Items..." style="float:right; background-color: white;width: 50%; font-size: 15px;margin: 5px;"></input></h1>
+    </header>
+    <div class="container">
+
+        <h2>Add Users</h2>
+        <Form id="addForm">
+            <input id="newUser" name="user" type="text">
+            <select name="userType" id="">
+                <option value="gold">Gold</option>
+                <option value="regular">Regular</option>
+                <option value="platinum">Platinum</option>
+            </select>
+            <input type="submit" value="Submit" class="black">
+        </Form>
+
+        <h2>Users</h2>
+        <ul id="users">
+            <li class="list-item">User 1 <button class="btDelete">X</button></li>
+            <li class="list-item">User 2 <button class="btDelete">X</button></li>
+            <li class="list-item">User 3 <button class="btDelete">X</button></li>
+            <li class="list-item">User 4 <button class="btDelete">X</button></li>
+        </ul>
+       
+    <script src="users.js"></script>
+</body>
+
+</html>

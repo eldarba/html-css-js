@@ -1,0 +1,38 @@
+ul {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+input.black {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: palegreen;
+}
+
+.container {
+    border: solid 1px;
+    padding: 5px;
+}
+
+h1 {
+    padding: 3px;
+}
+
+.inline-blcok{
+    display: inline-block
+}
+
+button.btDelete{
+    float: right;
+    color: red;
+}
