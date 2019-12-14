@@ -1,0 +1,45 @@
+body {
+    font-size: 100%;
+    background-color: lightgoldenrodyellow;
+}
+
+ul {
+    padding: 0;
+    border: solid 1px black;
+    width: 50%;
+}
+
+li {
+    list-style-type: none;
+    border: solid 1px black;
+    background-color: burlywood;
+    font-size: 1.2rem;
+}
+
+button.bt-del {
+    color: red;
+    float: right;
+    /* font-size: 1rem; */
+}
+
+div.container {
+    border: solid 1px black;
+    padding: 10px;
+}
+
+button[type="submit"].bt-submit,
+input[type="submit"].bt-submit {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    background-color: palegreen;
+}
+
+input#in-users-filter {
+    float: right;
+    margin-top: 6px;
+    width: 50%;
+    margin-right: 25px;
+}

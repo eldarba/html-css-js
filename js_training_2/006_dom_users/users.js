@@ -107,62 +107,62 @@ let element = document.querySelector('li'); // tag name
 // TRAVERSING THE DOM //
 let usersList = document.querySelector('#items');
 // parentNode / (parentElement - mostly the same)
-// console.log(usersList);
-// console.log(usersList.parentNode);
-// // console.log(usersList.parentElement); // ??? mostly the same
-// usersList.parentNode.style.backgroundColor = "gray";
-// console.log(usersList.parentNode.parentNode); // the body
+console.log(usersList);
+console.log(usersList.parentNode);
+// console.log(usersList.parentElement); // ??? mostly the same
+usersList.parentNode.style.backgroundColor = "gray";
+console.log(usersList.parentNode.parentNode); // the body
 
 // childNodes
-// console.log(usersList.childNodes); // includes white spaces
-// console.log(usersList.children); // without the white space - recomaneded
-// console.log(usersList.children[1]);
-// usersList.children[1].style.fontStyle = 'italic';
+console.log(usersList.childNodes); // includes white spaces
+console.log(usersList.children); // without the white space - recomaneded
+console.log(usersList.children[1]);
+usersList.children[1].style.fontStyle = 'italic';
 
-// //firstChild
-// console.log(usersList.firstChild); // text node
-// // firstElementChild
-// console.log(usersList.firstElementChild); // the first user - recomanded
-// usersList.firstElementChild.textContent = "Bye user 1";
+//firstChild
+console.log(usersList.firstChild); // text node
+// firstElementChild
+console.log(usersList.firstElementChild); // the first user - recomanded
+usersList.firstElementChild.textContent = "Bye user 1";
 
-// //lastChild
-// console.log(usersList.lastChild); // last text node
-// // lastElementChild
-// console.log(usersList.lastElementChild); // the first user - recomanded
-// usersList.lastElementChild.textContent = "Bye last user";
+//lastChild
+console.log(usersList.lastChild); // last text node
+// lastElementChild
+console.log(usersList.lastElementChild); // the first user - recomanded
+usersList.lastElementChild.textContent = "Bye last user";
 
-// // nextSibling
-// console.log(usersList.nextSibling); // text node
-// // nextElementSibling
-// console.log(usersList.nextElementSibling);
+// nextSibling
+console.log(usersList.nextSibling); // text node
+// nextElementSibling
+console.log(usersList.nextElementSibling);
 
-// // previousSibling
-// console.log(usersList.previousSibling); // text node
-// // previousElementSibling
-// console.log(usersList.previousElementSibling);
-// usersList.previousElementSibling.style.color = 'green';
+// previousSibling
+console.log(usersList.previousSibling); // text node
+// previousElementSibling
+console.log(usersList.previousElementSibling);
+usersList.previousElementSibling.style.color = 'green';
 
-// // CREATING ELEMENTS AND INSERT THEM
-// // create a div
-// let newDiv = document.createElement('div');
-// // add class
-// newDiv.className = 'hello';
-// // add id
-// newDiv.id = 'myDiv';
-// // set an attribute
-// newDiv.setAttribute('title', 'Hello Div'); // tooltip
-// // create a text node and append to our div
-// // newDiv.innerHTML = "aaa"; // ???
-// let newDivText = document.createTextNode('This is the Text of the new div');
-// newDiv.appendChild(newDivText);
+// CREATING ELEMENTS AND INSERT THEM
+// create a div
+let newDiv = document.createElement('div');
+// add class
+newDiv.className = 'hello';
+// add id
+newDiv.id = 'myDiv';
+// set an attribute
+newDiv.setAttribute('title', 'Hello Div'); // tooltip
+// create a text node and append to our div
+// newDiv.innerHTML = "aaa"; // ???
+let newDivText = document.createTextNode('This is the Text of the new div');
+newDiv.appendChild(newDivText);
 
 // // insert to our DOM
 let header = document.querySelector('#header1'); // the header
-// let h1InHeader = document.querySelector('#header1 h1'); // in the header the h1 element
-// header.insertBefore(newDiv, h1InHeader); // insert the div in the header before the h1 element
-// // now we can treat it like any other element in the DOM
-// newDiv.style.fontSize = '25px';
-// console.log(newDiv);
+let h1InHeader = document.querySelector('#header1 h1'); // in the header the h1 element
+header.insertBefore(newDiv, h1InHeader); // insert the div in the header before the h1 element
+// now we can treat it like any other element in the DOM
+newDiv.style.fontSize = '25px';
+console.log(newDiv);
 
 // ============= EVENTS ============================
 // ============= EVENTS ============================
@@ -174,7 +174,7 @@ let header = document.querySelector('#header1'); // the header
 
 // option 1 - using unonymous function ====
 let bt1 = document.getElementById('bt1');
-bt1.addEventListener('click', function (e) {
+bt1.addEventListener('click', function(e) {
     console.log("button 1 clicked");
     console.log(e); // the event object
     // when the button is clicked, this function is invoked with the event param passed to it.
@@ -194,12 +194,12 @@ bt2.addEventListener('click', f1);
 function f1(e) {
     console.log('button 2 clicked');
 
-    // // log some data
-    // console.log(e); // the event object
-    // console.log(e.target); // the object to which event is dispatched (its target).
-    // console.log(e.target.id);
-    // console.log(e.target.className);
-    // console.log(e.target.classList);
+    // log some data
+    console.log(e); // the event object
+    console.log(e.target); // the object to which event is dispatched (its target).
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);
 
     // // change the DOM
     // // add a div before button 1
@@ -212,16 +212,16 @@ function f1(e) {
     // outputDiv.innerHTML = '<div>' + e.target.id + '</div>';
 
     // // event info
-    // console.log("event type:", e.type);
-    // console.log("x relative to window:", e.clientX);
-    // console.log("y relative to window:", e.clientY);
-    // console.log("x relative to button:", e.offsetX);
-    // console.log("y relative to button:", e.offsetY);
-    // // event info alt-ctrl-shift
-    // console.log("alt held down:", e.altKey);
-    // console.log("ctl held down:", e.ctrlKey);
-    // console.log("shift held down:", e.shiftKey);
-    // console.log("================");
+    console.log("event type:", e.type);
+    console.log("x relative to window:", e.clientX);
+    console.log("y relative to window:", e.clientY);
+    console.log("x relative to button:", e.offsetX);
+    console.log("y relative to button:", e.offsetY);
+    // event info alt-ctrl-shift
+    console.log("alt held down:", e.altKey);
+    console.log("ctl held down:", e.ctrlKey);
+    console.log("shift held down:", e.shiftKey);
+    console.log("================");
 
 
     return 5;
@@ -245,23 +245,23 @@ function f2(e) {
 // add a light gray div with id="box" bellow the buttons in the html
 let box = document.getElementById('box');
 
-// let box = document.getElementById('box');
-// box.addEventListener('mouseenter', f2); // fires when entering the registered element area from outside
-// box.addEventListener('mouseleave', f2); // fires when leaving the registered element area to the outside
+let box = document.getElementById('box');
+box.addEventListener('mouseenter', f2); // fires when entering the registered element area from outside
+box.addEventListener('mouseleave', f2); // fires when leaving the registered element area to the outside
 
-// box.addEventListener('mouseover', f2); // fires when going over the registered element or when going over it's children
-// box.addEventListener('mouseout', f2); // fires when going out of the registered element or when going out of it's children even if still in the ara of the registered
+box.addEventListener('mouseover', f2); // fires when going over the registered element or when going over it's children
+box.addEventListener('mouseout', f2); // fires when going out of the registered element or when going out of it's children even if still in the ara of the registered
 
-// // MOUSE MOVE EVENT
-// // Add another div to the right of the box div (make the inline by css: 'display: inline-block')
-// box.addEventListener('mousemove', f3);
+// MOUSE MOVE EVENT
+// Add another div to the right of the box div (make the inline by css: 'display: inline-block')
+box.addEventListener('mousemove', f3);
 
-// function f3(e) {
-//     console.log('EVENT TYPE:', e.type, ':' + e.target.tagName);
-//     let output = document.getElementById('output2');
-//     output.innerHTML = "<h3>offsetX = " + e.offsetX + "</h3><h3>offsetY = " + e.offsetY + "</h3>";
-//     box.style.backgroundColor="rgb("+ e.offsetX + ", " + e.offsetY + ", 40)"
-// }
+function f3(e) {
+    console.log('EVENT TYPE:', e.type, ':' + e.target.tagName);
+    let output = document.getElementById('output2');
+    output.innerHTML = "<h3>offsetX = " + e.offsetX + "</h3><h3>offsetY = " + e.offsetY + "</h3>";
+    box.style.backgroundColor = "rgb(" + e.offsetX + ", " + e.offsetY + ", 40)"
+}
 
 
 // CHANGE EVENTs

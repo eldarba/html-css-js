@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+    <h1>Users List <input id="in-users-filter" type="text" placeholder="find users..."></h1>
+
+    <div id="container-main" class="container">
+        <h3>Add Users</h3>
+        <input id="cb-enabled" type="checkbox">Add Remove Enabled</input><br>
+        <fieldset id="fs-add-user" disabled>
+            <legend>Add Users Form</legend>
+
+            <form id="form-add-user">
+                <input id="in-user" type="text"><button id="bt-submit" class="bt-submit" type="submit">Submit</button>
+            </form>
+        </fieldset>
+        <h3>Users</h3>
+        <fieldset id="fs-users-list" disabled>
+
+            <ul id="list-users">
+                <li>User 1<button class="bt-del aaa bbb">x</button></li>
+                <li>User 2<button class="bt-del bbb ccc">x</button></li>
+                <li>User 3<button class="bt-del zzz abc">x</button></li>
+            </ul>
+        </fieldset>
+    </div>
+    <script src="users.js"></script>
+</body>
+
+</html>
