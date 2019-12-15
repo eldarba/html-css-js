@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Animals</h1>
+    <button onclick="loadAnimals()">Load Animals</button>
+    <div id="div1"></div>
+</body>
+
+<script>
+    function loadAnimals() {
+        var url = 'https://raw.githubusercontent.com/LearnWebCode/json-example/master/animals-1.json';
+        // var url = 'https://raw.githubusercontent.com/LearnWebCode/json-example/master/pet-of-the-day.json';
+        url += "?t=" + Math.random();
+        let req = new XMLHttpRequest();
+        console.log("req.readyState:", req.readyState, ": request not initialized");
+        // console.dir(req);
+        req.onreadystatechange = () => {
+            // console.log("req.readyState:", req.readyState);
+
+
+
+            switch (req.readyState) {
+                case 0:
+                    console.log("req.readyState:", req.readyState, ": request not initialized");
+                    break;
+                case 1:
+                    console.log("req.readyState:", req.readyState, ": server connection established");
+                    break;
+                case 2:
+                    console.log("req.readyState:", req.readyState, ": request received");
+                    break;
+                case 3:
+                    console.log("req.readyState:", req.readyState, ": processing request");
+                    break;
+                case 4:
+                    console.log("req.readyState:", req.readyState, ": request finished and response is ready");
+                    console.log("status: ", req.status, ": ", req.statusText);
+
+                    if (req.status == 200) {
+                        let resp = req.responseText;
+                        document.getElementById('div1').innerHTML = resp;
+                        let headers = req.getAllResponseHeaders();
+                        console.log("respons headers:");
+                        console.log(headers);
+                    } else {
+                        console.log("Error. req.status:", req.status);
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+
+            // if (req.readyState == 4 && req.status == 200) {
+            //     console.log("req.readyState:", req.readyState);
+            //     let resp = req.responseText;
+            //     document.getElementById('div1').innerHTML = resp;
+            //     let headers = req.getAllResponseHeaders();
+            //     console.log("respons headers:");
+            //     console.log(headers);
+
+            // } else {
+            //     console.log("req.readyState:", req.readyState);
+
+            // }
+        };
+
+        req.open('get', url, true);
+        req.send();
+
+
+    }
+</script>
+
+</html>

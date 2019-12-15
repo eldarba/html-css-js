@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>file 1</h1>
+    <button onclick="openBlankEmptyWindow()">Open Blank Empty Window</button>
+    <button onclick="closeBlankEmptyWindow()">Close Blank Empty Window</button>
+    <button onclick="openBlankGoogleWindow()">Open Blank Google Window</button>
+    <button onclick="closeBlankGoogleWindow()">Close Blank Google Window</button>
+    <br><br>
+    <button onclick="openEmptyWindow()">Open a Blank Window in Selfe</button>
+    <button onclick="openGoogleWindow()">Open Google Window in Selfe</button>
+    <br><br>
+    <button onclick="hasBeenClosed()">has blank empty window closed?</button>
+    <div id="msg"></div>
+    <script>
+        let emptyWin;
+        let googleWin;
+
+        function hasBeenClosed() {
+            let msg;
+            if (emptyWin) {
+                if (emptyWin.closed) {
+                    msg = "window closed";
+                } else {
+                    msg = "window NOT closed";
+                }
+            } else {
+                msg = "window NEVER opened";
+            }
+            document.getElementById('msg').textContent = msg;
+        }
+
+        function openBlankEmptyWindow() {
+            emptyWin = window.open("", "_blank", "width=400, height=400");
+        }
+
+        function openBlankGoogleWindow() {
+            googleWin = window.open("http://www.google.com", "_blank", "width=400, height=400");
+        }
+
+        function closeBlankEmptyWindow() {
+            emptyWin.close();
+        }
+
+        function closeBlankGoogleWindow() {
+            googleWin.close();
+        }
+
+        function openEmptyWindow() {
+            window.open("", "_self", "width=400, height=400");
+        }
+
+        function openGoogleWindow() {
+            window.open("http://www.google.com", "_self", "width=400, height=400");
+        }
+
+        window.onunload = closeBlankGoogleWindow;
+    </script>
+</body>
+
+</html>

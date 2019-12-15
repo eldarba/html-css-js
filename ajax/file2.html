@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Animals</h1>
+<button onclick="loadAnimals()">Load Animals</button>
+<div id="container"></div>
+
+<body>
+    <script>
+        function loadAnimals() {
+            // var url = 'https://raw.githubusercontent.com/LearnWebCode/json-example/master/animals-1.json';
+            var url = 'https://raw.githubusercontent.com/LearnWebCode/json-example/master/pet-of-the-day.json';
+            url += "?t=" + Math.random();
+            let req = new XMLHttpRequest();
+            req.onreadystatechange = () => {
+                if (req.readyState == 4 && req.status == 200) {
+                    let resp = req.responseText;
+                    dispaly(resp);
+                    // document.getElementById('div1').innerHTML = resp;
+                }
+            };
+
+            req.open('get', url, true);
+            req.send();
+        }
+
+
+        /*
+    
+        { 
+            "name": "Barksalot", 
+            "species": "Dog", 
+            "age": 5, 
+            "photo": "https://learnwebcode.github.io/json-example/images/dog-1.jpg" 
+        }
+    
+        */
+        function dispaly(resp) {
+            let obj = JSON.parse(resp);
+            console.dir(obj);
+            let container = document.getElementById('container');
+
+            let div = document.createElement('div');
+            div.innerHTML = "Age: " + obj.age;
+            container.appendChild(div);
+
+            div = document.createElement('div');
+            div.innerHTML = "Name: " + obj.name;
+            container.appendChild(div);
+
+            div = document.createElement('div');
+            div.innerHTML = "Species: " + obj.species;
+            container.appendChild(div);
+
+            let img = document.createElement('img');
+            img.src = obj.photo;
+            img.style.width = "250px";
+            img.style.border = "5px solid red";
+            container.appendChild(img);
+
+        }
+    </script>
+
+    <img src="" alt="">
+</body>
+
+</html>
